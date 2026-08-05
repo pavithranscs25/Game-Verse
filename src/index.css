@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+body{
+    background-color: rgb(218, 211, 211);
+}
+.games{
+    cursor: pointer;
+}
+.title{
+    text-align: center;
+    padding: 10px;
+}
