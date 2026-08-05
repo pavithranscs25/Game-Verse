@@ -7,14 +7,12 @@ function Home() {
 
     const navigate = useNavigate();
     const {id} = useParams();
-
-    const [show, setShow]=useState(false);
     const [value, setValue]=useState("");
     const [games, setGames]=useState([]);
     const [dup, setDup]=useState([]);
 
     useEffect(() => {
-            fetch('http://localhost:3000/games')
+            fetch('/data.json')
             .then((data) => data.json())
             .then((data) => {
                 setGames(data);
@@ -34,13 +32,13 @@ function Home() {
                 setGames(dup);
             }
             else if(value === "Action Adventure"){
-                setGames(dup.filter((game) => game.genre.includes(value)));
+                setGames(dup.filter((game) => game.genre.includes(value.toLowerCase())));
             }
             else if(value === "Royale"){
-                setGames(dup.filter((game) => game.genre.includes(value)));
+                setGames(dup.filter((game) => game.genre.includes(value.toLowerCase())));
             }
             else if(value === "Sports"){
-                setGames(dup.filter((game) => game.genre.includes(value)));
+                setGames(dup.filter((game) => game.genre.includes(value.toLowerCase())));
             }
         }
         function handleInput(input){
@@ -48,7 +46,7 @@ function Home() {
                 setGames(dup);
             }
             else{
-                setGames(dup.filter((game) => game.title.toLowerCase().includes(input)));
+                setGames(dup.filter((game) => game.title.toLowerCase().includes(input.toLowerCase())));
             }
         }
 

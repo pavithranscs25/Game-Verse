@@ -1,5 +1,4 @@
-{
-  "games": [
+[
     {
       "id": 1,
       "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg",
@@ -240,5 +239,4 @@
         "rating": 4.2,
         "releaseDate": "2020-10-15"
     }
-  ]
-}
+]

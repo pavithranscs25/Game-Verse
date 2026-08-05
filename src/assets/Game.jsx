@@ -7,17 +7,17 @@ function Game() {
     const [data, setData]=useState(null)
 
     useEffect(() => {
-        fetch(`http://localhost:3000/games/${id}`)
+        fetch('/data.json')
         .then((data) => data.json())
         .then((data) => {
-            console.log(data);
-            setData(data);})
+            const game = data.find((game) => game.id === Number(id));
+            setData(game);})
         .catch((err) => console.log(err))
     },[id])
 
     if(!data){
         return(
-            <h2>LOADIND...</h2>
+            <h2>Game not found</h2>
         )
     }
 
