@@ -1,12 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Navbar from './Navbar';
 
 function Home() {
 
     const navigate = useNavigate();
-    const {id} = useParams();
     const [value, setValue]=useState("");
     const [games, setGames]=useState([]);
     const [dup, setDup]=useState([]);
@@ -32,13 +31,13 @@ function Home() {
                 setGames(dup);
             }
             else if(value === "Action Adventure"){
-                setGames(dup.filter((game) => game.genre.includes(value.toLowerCase())));
+                setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
             }
             else if(value === "Royale"){
-                setGames(dup.filter((game) => game.genre.includes(value.toLowerCase())));
+                setGames(dup.filter((game) => game.genre.toLowerCase()>includes(value.toLowerCase())));
             }
             else if(value === "Sports"){
-                setGames(dup.filter((game) => game.genre.includes(value.toLowerCase())));
+                setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
             }
         }
         function handleInput(input){
