@@ -27,7 +27,7 @@ function Home() {
             else if(value === "Action Adventure"){
                 setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
             }
-            else if(value === "Royale"){
+            else if(value === "Battle Royale"){
                 setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
             }
             else if(value === "Sports"){
@@ -55,7 +55,7 @@ function Home() {
             <select name="" id="" onChange={(e) => setValue(e.target.value)} className="text-slate border border-slate-400 rounded-lg px-2 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
                 <option value="General">All games</option>
                 <option value="Action Adventure">Show Aventures Games</option>
-                <option value="Royale">Show Battle Royale Games</option>
+                <option value="Battle Royale">Show Battle Royale Games</option>
                 <option value="Sports">Show Sports Games</option>
             </select>
             <button onClick = {showResult} className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/40 cursor-pointer">Show Results</button>
