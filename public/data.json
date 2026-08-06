@@ -214,6 +214,15 @@
     },
     {
         "id": 25,
+        "image": "/gta vc.jpg",
+        "title": "Grand Theft Auto: Vice City",
+        "genre": "Action Adventure",
+        "developer": "Rockstar North",
+        "releaseDate": "2002-10-29",
+        "rating": 4.8
+  },
+    {
+        "id": 26,
         "image": "/real cricket 24.jpg",
         "title": "Real Cricket 24",
         "genre": "Sports",
@@ -222,12 +231,30 @@
         "releaseDate": "2023-05-17"
     },
     {
-        "id": 26,
+        "id": 27,
         "image": "/wcc3.jpg",
         "title": "World Cricket Championship 3",
         "genre": "Sports",
         "developer": "Nextwave Multimedia",
         "rating": 4.2,
         "releaseDate": "2020-10-15"
+    },
+    {
+        "id": 28,
+        "image": "/gta sa.jpg",
+        "title": "Grand Theft Auto: San Andreas",
+        "genre": "Action Adventure",
+        "developer": "Rockstar North",
+        "releaseDate": "2004-10-26",
+        "rating": 4.9
+    },
+    {
+        "id": 29,
+        "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/12210/header.jpg",
+        "title": "Grand Theft Auto IV",
+        "genre": "Action Adventure",
+        "developer": "Rockstar North",
+        "releaseDate": "2008-12-02",
+        "rating": 4.7
     }
 ]
