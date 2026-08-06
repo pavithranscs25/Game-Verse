@@ -222,15 +222,6 @@
         "releaseDate": "2023-05-17"
     },
     {
-        "id": 26,
-        "image": "/images/cricket-24.jpg",
-        "title": "Cricket 24",
-        "genre": "Sports",
-        "developer": "Big Ant Studios",
-        "rating": 4.5,
-        "releaseDate": "2023-10-04"
-    },
-    {
         "id": 27,
         "image": "/wcc3.jpg",
         "title": "World Cricket Championship 3",
