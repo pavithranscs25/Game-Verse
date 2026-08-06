@@ -28,7 +28,7 @@ function Home() {
                 setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
             }
             else if(value === "Royale"){
-                setGames(dup.filter((game) => game.genre.toLowerCase()>includes(value.toLowerCase())));
+                setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
             }
             else if(value === "Sports"){
                 setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
