@@ -21,13 +21,7 @@ function Home() {
         }, []);
 
         function showResult(){
-            if(value === "Sort by Rating"){
-                setGames(prev => [...prev].sort((a,b) => b.rating-a.rating));
-            }
-            else if(value === "Sort by Release date"){
-                setGames(prev => [...prev].sort((a,b) => new Date(b.releaseDate)-new Date(a.releaseDate)));
-            }
-            else if(value === "General"){
+            if(value === "General"){
                 setGames(dup);
             }
             else if(value === "Action Adventure"){
@@ -60,8 +54,6 @@ function Home() {
         
             <select name="" id="" onChange={(e) => setValue(e.target.value)} className="text-slate border border-slate-400 rounded-lg px-2 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
                 <option value="General">All games</option>
-                <option value="Sort by Rating">Sort by Rating</option>
-                <option value="Sort by Release date">Sort by Release date</option>
                 <option value="Action Adventure">Show Aventures Games</option>
                 <option value="Royale">Show Battle Royale Games</option>
                 <option value="Sports">Show Sports Games</option>
