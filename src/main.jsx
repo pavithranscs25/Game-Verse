@@ -5,6 +5,7 @@ import Game from './assets/Game'
 import Wishlist from './assets/Wishlist'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { StrictMode } from 'react'
+import { Toaster }from 'react-hot-toast'
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Toaster position="top-center" />
     <RouterProvider router={ router }/>
   </StrictMode>
 )
