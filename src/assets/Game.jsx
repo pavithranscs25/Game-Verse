@@ -48,7 +48,7 @@ function Game() {
             <div className="mt-5 text-yellow-400 text-xl">
             ⭐ {data.rating} / 5
             </div>
-            <button onClick={toast.success("Game added to your Wishlist!")} className="cursor-pointer mt-8 bg-cyan-300 text-cyan-800 hover:bg-cyan-600 hover:text-cyan-950 px-6
+            <button onClick={() => toast.success("Game added to your Wishlist!")} className="cursor-pointer mt-8 bg-cyan-300 text-cyan-800 hover:bg-cyan-600 hover:text-cyan-950 px-6
                           py-3 rounded-xl font-bold transition duration:1000">
                 Add to Wishlist
           </button>
