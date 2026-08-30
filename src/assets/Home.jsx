@@ -24,13 +24,7 @@ function Home() {
             if(value === "General"){
                 setGames(dup);
             }
-            else if(value === "Action Adventure"){
-                setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
-            }
-            else if(value === "Battle Royale"){
-                setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
-            }
-            else if(value === "Sports"){
+            else{
                 setGames(dup.filter((game) => game.genre.toLowerCase().includes(value.toLowerCase())));
             }
         }
@@ -61,16 +55,27 @@ function Home() {
             <button onClick = {showResult} className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/40 cursor-pointer">Show Results</button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:px-12">
-            {games.map((game) => {
+            {games.length === 0 ? (
+                <div className="col-span-full text-center mt-10">
+                    <h2 className="text-xl font-semibold">
+                        No games found
+                    </h2>
+                    <p className="text-gray-500 mt-2">
+                        Try your search again.
+                    </p>
+                </div>
+            ) : (
+            games.map((game) => {
                 return(
                     <div key={game.id} className="games h-[200px] w-[300px] bg-slate-900 text-white rounded-xl p-5
                         shadow-lg border border-slate-700 hover:scale-105 hover:shadow-cyan-500/20 transition-all duration-300"
                          onClick={() => navigate(`/Game/${game.id}`)}>
-                        <img src={game.image} alt="" className="h-[130px] w-[400px]"/>
+                        <img src={game.image} alt="" className="h-[130px] w-full object-cover rounded-lg"/>
                         <h2 className="title">{game.title}</h2>
                     </div>
                 );
-            })}
+            })
+        )}
         </div>
     </>
   )
