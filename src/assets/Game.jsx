@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
 
 function Game() {
 
     const {id}=useParams();
     const [data, setData]=useState(null)
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('/data.json')
@@ -48,8 +49,10 @@ function Game() {
             <div className="mt-5 text-yellow-400 text-xl">
             ⭐ {data.rating} / 5
             </div>
-            <button onClick={() => toast.success(`${data.title} added to your Wishlist!`)} className="cursor-pointer mt-8 bg-cyan-300 text-cyan-800 hover:bg-cyan-600 hover:text-cyan-950 px-6
-                          py-3 rounded-xl font-bold transition duration:1000">
+            <button onClick={() => {toast.success(`${data.title} added to your Wishlist!`)
+                                    navigate('./Wishlist')
+            }} className="cursor-pointer mt-8 bg-cyan-300 text-cyan-800 hover:bg-cyan-600 hover:text-cyan-950 px-6
+                          py-3 rounded-xl font-bold transition duration:1000" >
                 Add to Wishlist
           </button>
 

@@ -1,10 +1,7 @@
 import React from 'react'
-import { useNavigate, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Navbar() {
-
-    const navigate = useNavigate();
-
   return (
     <nav className="flex items-center gap-200 bg-black border-b border-slate-800 shadow-lg">
         <div className="flex items-center justify-between py-6 px-[45px]">
