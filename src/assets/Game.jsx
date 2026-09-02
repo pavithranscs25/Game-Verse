@@ -6,7 +6,7 @@ function Game() {
 
     const {id}=useParams();
     const [data, setData]=useState(null)
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     useEffect(() => {
         fetch('/data.json')
@@ -21,6 +21,10 @@ function Game() {
         return(
             <h2>Game not found</h2>
         )
+    }
+
+    function addToWishlist(){
+        localStorage.setItem("wishlist", JSON.stringify(data));
     }
 
   return (
@@ -50,7 +54,7 @@ function Game() {
             ⭐ {data.rating} / 5
             </div>
             <button onClick={() => {toast.success(`${data.title} added to your Wishlist!`)
-                                    navigate('/Wishlist')
+                                    addToWishlist(data);
             }} className="cursor-pointer mt-8 bg-cyan-300 text-cyan-800 hover:bg-cyan-600 hover:text-cyan-950 px-6
                           py-3 rounded-xl font-bold transition duration:1000" >
                 Add to Wishlist
